@@ -1,8 +1,8 @@
 import React from 'react';
-import { Greeting } from '../';
+import { Example } from '../';
 
 export default {
   title: 'Greeting',
 };
 
-export const jared = () => <Greeting name="Jared" />;
+export const jared = () => <Example />;

@@ -1,1 +1,1 @@
-export * from './Greeting.gen';
+export * from './Example';
