@@ -3,3 +3,5 @@
 node_modules
 .cache
 dist
+.rts2_cache_esm
+.rts2_cache_cjs
