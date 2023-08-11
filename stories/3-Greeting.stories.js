@@ -1,8 +1,8 @@
 import React from 'react';
-import { Example } from '../';
+import { Test } from '../';
 
 export default {
   title: 'Greeting',
 };
 
-export const jared = () => <Example />;
+export const jared = () => <Test />;

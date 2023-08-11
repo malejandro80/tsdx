@@ -1,4 +1,3 @@
-
 {
   "name": "reason-tsdx",
   "version": "0.1.0",
@@ -8,31 +7,6 @@
   "files": [
     "dist"
   ],
-  "publishConfig": {
-    "registry": "http://npm.pkg.github.com/abatech"
-  },
-  "release": {
-    "branches": [
-      "dev"
-    ],
-    "anaylzeCommits": {
-      "minor": [
-        "feat",
-        "refactor",
-        "test",
-        "revert",
-        "build"
-      ],
-      "patch": [
-        "fix",
-        "perf",
-        "docs",
-        "style",
-        "chore",
-        "ci"
-      ]
-    }
-  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -43,32 +17,27 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "bugs": {
-    "url": "https://github.com/abatech/aba-storybook-fe/issues"
+  "peerDependencies": {
+    "react": ">=16"
   },
-  "homepage": "https://github.com/abatech/aba-storybook-fe#aba-storybook-fe",
-  "license": "ISC",
-  "author": "ABA centers (Team Nasu)",
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.3",
-    "@mui/material": "^5.14.3",
-    "@storybook/test-runner": "^0.13.0",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.26",
-    "react-copy-to-clipboard": "^5.1.0",
-    "react-select-material-ui": "^9.2.0",
-    "tailwindcss": "^3.3.3",
-    "vite-plugin-linter": "^2.0.2",
-    "vite-tsconfig-paths": "^4.2.0",
-    "react": "16.8.0 || >=18.x",
-    "react-dom": "16.8.0 || >=18.x"
+  "husky": {
+    "hooks": {}
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
   "devDependencies": {
-    "@storybook/addon-postcss": "^2.0.0",
+    "@babel/core": "^7.6.2",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
     "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.5",
+    "@types/react-dom": "^16.9.1",
     "asyncro": "^3.0.0",
     "babel-loader": "^8.0.6",
     "bs-platform": "5.2.0",
@@ -77,67 +46,19 @@
     "globby": "^10.0.1",
     "husky": "^3.0.8",
     "nodemon": "^1.19.3",
-    "postcss": "^8.4.27",
-    "rollup-plugin-postcss": "^4.0.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "tsdx": "^0.9.3",
     "tslib": "^1.10.0",
-    "@storybook/addon-essentials": "^7.2.1",
-    "@storybook/addon-interactions": "^7.2.1",
-    "@storybook/addon-links": "^7.2.1",
-    "@storybook/addon-options": "^5.3.21",
-    "@storybook/addon-styling": "^2.0.2-next.1",
-    "@storybook/blocks": "^7.2.1",
-    "@storybook/jest": "^0.1.0",
-    "@storybook/manager-api": "^7.2.1",
-    "@storybook/react": "^7.2.1",
-    "@storybook/react-vite": "^7.2.1",
-    "@storybook/testing-library": "^0.2.0",
-    "@storybook/theming": "^7.2.1",
-    "@types/react": "^18.2.14",
-    "@types/react-copy-to-clipboard": "^5.0.4",
-    "@types/react-dom": "^18.2.6",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
-    "@typescript-eslint/parser": "^5.59.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "copyfiles": "^2.4.1",
-    "css-loader": "^6.8.1",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-storybook": "^0.6.13",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "resolve-url-loader": "^5.0.0",
-    "rimraf": "^5.0.1",
-    "sass": "^1.63.6",
-    "sass-loader": "^13.3.2",
-    "semantic-release": "^21.0.7",
-    "storybook": "^7.2.1",
-    "style-loader": "^3.3.3",
-    "typescript": "^5.0.2",
-    "vite": "^4.3.9",
-    "vite-plugin-dts": "^3.1.0"
+    "typescript": "^3.7.0-dev.20191004"
   },
-  "types": "dist/index.d.ts",
-  "plugins": [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
-    "@semantic-release/changelog",
-    "@semantic-release/github",
-    "@semantic-release/npm",
-    "@semantic-release/git"
-  ],
-  "peerDependencies": {
-    "react": "16.8.0 || >=18.x",
-    "react-dom": "16.8.0 || >=18.x"
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.4",
+    "reason-react": "^0.7.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "^3.3.3"
   }
 }
